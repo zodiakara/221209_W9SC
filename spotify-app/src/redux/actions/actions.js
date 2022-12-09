@@ -8,7 +8,7 @@ const searchEndpoint =
   "https://striveschool-api.herokuapp.com/api/deezer/search?q=";
 
 export const getSongsAction = (query) => {
-  return async (dispatch) => {
+  return async (dispatch, getState) => {
     try {
       const response = await fetch(searchEndpoint + query);
       if (response.ok) {
